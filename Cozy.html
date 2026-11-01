@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cozy Notes | Your Little Safe Space</title>
+    <meta name="description" content="A cozy space to express your feelings, save your thoughts, and organize your ideas.">
+
+    <link rel="stylesheet" href="cozy.css">
+    <script src="cozy.js" defer></script>
+</head>
+
+<body>
+    <div class="page-background"></div>
+
+    <header class="header">
+        <a href="Cozy.html" class="logo" aria-label="Cozy Notes home">
+            <h2 class="logo-text">♡ Cozy Notes</h2>
+            <span>Cozy Notes</span>
+        </a>
+
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#feelings" class="nav-link">Feelings</a>
+            <a href="#my-notes" class="nav-link">My Notes</a>
+        </nav>
+
+        <a href="#my-notes" class="header-button">Write a note <span>↗</span></a>
+    </header>
+
+    <main class="container">
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow"><span class="status-dot"></span> YOUR LITTLE SAFE SPACE</span>
+
+                <h1>Your thoughts deserve<br>
+                    a <span>cozy place.</span>
+                </h1>
+
+                <p>
+                    A little space for your big feelings.
+                    Write what is on your mind, celebrate your moments,
+                    and make room for yourself.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#my-notes" class="primary-button">Write your thoughts <span>→</span></a>
+                    <a href="#feelings" class="secondary-button">Explore feelings</a>
+                </div>
+
+                <div class="hero-caption">
+                    <span>♡</span> Take a breath. You're right where you need to be.
+                </div>
+            </div>
+
+            <div class="hero-art" aria-label="A peaceful place for your thoughts">
+                <div class="glass-card floating-card">
+                    <span class="art-sparkle">✦</span>
+                    <div class="moon">☾</div>
+                    <div class="art-title">slow down</div>
+                    <div class="art-subtitle">feel · write · grow</div>
+                    <div class="art-heart">♡</div>
+                </div>
+
+                <span class="decor decor-one">✳</span>
+                <span class="decor decor-two">✦</span>
+                <span class="decor decor-three">♡</span>
+            </div>
+        </section>
+
+        <section class="feelings-section" id="feelings">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">CHECK IN WITH YOURSELF</span>
+                    <h2>How are you feeling today?</h2>
+                    <p>Every feeling deserves a little space.</p>
+                </div>
+                <span class="heading-heart">♡</span>
+            </div>
+
+            <div class="feelings-grid">
+                <button class="feeling-card" type="button" data-feeling="Happy">
+                    <span class="feeling-emoji">🥰</span>
+                    <span class="feeling-name">Happy</span>
+                    <span class="feeling-description">A little sunshine</span>
+                </button>
+
+                <button class="feeling-card" type="button" data-feeling="Calm">
+                    <span class="feeling-emoji">😌</span>
+                    <span class="feeling-name">Calm</span>
+                    <span class="feeling-description">Peace within</span>
+                </button>
+
+                <button class="feeling-card" type="button" data-feeling="Sad">
+                    <span class="feeling-emoji">🥺</span>
+                    <span class="feeling-name">Sad</span>
+                    <span class="feeling-description">It's okay to feel</span>
+                </button>
+
+                <button class="feeling-card" type="button" data-feeling="Excited">
+                    <span class="feeling-emoji">🤩</span>
+                    <span class="feeling-name">Excited</span>
+                    <span class="feeling-description">Full of possibilities</span>
+                </button>
+
+                <button class="feeling-card" type="button" data-feeling="Anxious">
+                    <span class="feeling-emoji">🥹</span>
+                    <span class="feeling-name">Anxious</span>
+                    <span class="feeling-description">Take it slowly</span>
+                </button>
+
+                <button class="feeling-card" type="button" data-feeling="Angry">
+                    <span class="feeling-emoji">😤</span>
+                    <span class="feeling-name">Angry</span>
+                    <span class="feeling-description">Let it out gently</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="notes-section" id="my-notes">
+            <div class="note-intro">
+                <span class="section-label">A MOMENT FOR YOU</span>
+                <h2>What's on your mind?</h2>
+                <p>No pressure. No perfect words. Just you.</p>
+
+                <div class="little-reminder">
+                    <span>🌷</span>
+                    <p>Reminder: You don't have to have everything figured out today.</p>
+                </div>
+            </div>
+
+            <form class="note-form" id="note-form">
+                <div class="form-top">
+                    <span>✎ &nbsp; A new note</span>
+                    <span class="private-label">♡ Just for you</span>
+                </div>
+
+                <label for="note-title">Give your thought a title</label>
+                <input
+                    type="text"
+                    id="note-title"
+                    placeholder="A thought, a dream, a little reminder..."
+                    maxlength="100"
+                    required
+                >
+
+                <label for="note-feeling">Your current feeling</label>
+                <select id="note-feeling" required>
+                    <option value="">Choose a feeling</option>
+                    <option value="Happy">🥰 Happy</option>
+                    <option value="Calm">😌 Calm</option>
+                    <option value="Sad">🥺 Sad</option>
+                    <option value="Excited">🤩 Excited</option>
+                    <option value="Anxious">🥹 Anxious</option>
+                    <option value="Angry">😤 Angry</option>
+                    <option value="Other">💭 Other</option>
+                </select>
+
+                <label for="note-content">Let your thoughts flow</label>
+                <textarea
+                    id="note-content"
+                    placeholder="Dear diary, today I'm feeling..."
+                    rows="5"
+                    maxlength="3000"
+                    required
+                ></textarea>
+
+                <div class="form-bottom">
+                    <span id="character-count">0 / 3000</span>
+                    <button type="submit" class="primary-button save-button">
+                        Save my note <span>♡</span>
+                    </button>
+                </div>
+
+                <p id="form-message" class="form-message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="saved-section" id="saved-notes">
+            <div class="section-heading saved-heading">
+                <div>
+                    <span class="section-label">LITTLE PIECES OF YOU</span>
+                    <h2>Your saved notes</h2>
+                    <p>Every page is part of your story.</p>
+                </div>
+                <span class="notes-count" id="notes-count">0 notes</span>
+            </div>
+
+            <div class="saved-grid" id="saved-grid">
+                <div class="empty-state" id="empty-state">
+                    <span>📖</span>
+                    <h3>Your story starts here</h3>
+                    <p>Save your first note and it will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <a href="#home" class="footer-logo">Cozy Notes <span>♡</span></a>
+            <p>Made with love, for all the little things inside you.</p>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+        </footer>
+    </main>
+</body>
+</html>
+Cozy@Notes_2026!raneem
